@@ -91,7 +91,6 @@ var opcion1 = document.createElement("option");
 campoCiudades.appendChild(opcion1);
 var contenido1 = document.createTextNode("¡Paris!");
 opcion1.appendChild(contenido1);
-formulario.appendChild(campoCiudades);
 var opcion2 = document.createElement("option");
 campoCiudades.appendChild(opcion2);
 var contenido2=
@@ -108,7 +107,7 @@ div7.appendChild(campoCiudades);
 var div8 = document.createElement("div");
 formulario.appendChild(div8);
 var textoRadio= document.createTextNode("Transporte:");
-formulario.appendChild(textoRadio);
+div8.appendChild(textoRadio);
 
 //Radio1
 var radio1 = document.createElement("input");  
@@ -119,8 +118,6 @@ radio1.value = "miradio1";
 radio1.defaultChecked = true;    
 radio1.checked = true; 
 
-
-
 //Radio2
 var radio2 = document.createElement("input");   
 radio2.type = "radio";   
@@ -128,7 +125,6 @@ radio2.name = "radioGrp";
 radio2.id = "rad2";   
 radio2.value = "miradio2"; 
    
-
 //Radio3
 var radio3 = document.createElement("input");   
 radio3.type = "radio";   
@@ -150,7 +146,6 @@ objLabel1.appendChild(objTextNode1)
 div8.appendChild(objLabel1)
 div8.appendChild(radio1)
 
-document.write("<br\>");
 var objTextNode2 = document.createTextNode("Barco");   
 var objLabel2 = document.createElement("label");   
 objLabel2.htmlFor = radio2.id;   
@@ -159,7 +154,6 @@ objLabel2.appendChild(objTextNode2)
 div8.appendChild(objLabel2)
 div8.appendChild(radio2)
 
-document.write("<br\>");
 var objTextNode3 = document.createTextNode("Coche");   
 var objLabel3 = document.createElement("label");   
 objLabel3.htmlFor = radio3.id;   
@@ -168,7 +162,6 @@ objLabel3.appendChild(objTextNode3)
 div8.appendChild(objLabel3)
 div8.appendChild(radio3)
 
-document.write("<br\>");
 var objTextNode4 = document.createTextNode("Autobus");   
 var objLabel4 = document.createElement("label");   
 objLabel4.htmlFor = radio4.id;   
@@ -256,22 +249,14 @@ for(let i = 0; i < 3; i++) {
   input.setAttribute('required','true');
 div10.appendChild(input)
 
+//Botón Entregar
 var campoEntregar= document.createElement("input");
 campoEntregar.setAttribute("type", "submit");
 campoEntregar.setAttribute("value", "Entregar");
 formulario.appendChild(campoEntregar);
 
-
+//Botón Limpiar formulario
 var campoBorrar= document.createElement("input");
 campoBorrar.setAttribute("type", "reset");
 campoBorrar.setAttribute("value", "Limpiar formulario");
 formulario.appendChild(campoBorrar);
-
-var labelArchivo = document.createElement("label");
-labelArchivo.textContent="Suba el Justificante de transferencia ";
-formulario.appendChild(labelArchivo);
-var campoArchivo = document.createElement("input");
-campoArchivo.setAttribute("type", "file");
-campoArchivo.setAttribute("name", "img");
-//campoArchivo.setAttribute(multiple);
-formulario.appendChild(campoArchivo);
