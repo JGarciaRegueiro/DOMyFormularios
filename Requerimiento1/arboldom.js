@@ -1,22 +1,14 @@
-/* Página web completamente por JavaScript, modificando el árbol DOM. Solo tendrá un contenedor (DIV) y sobre dicho contenedor y por medio de JavaScript se añadirán elementos a dicho contenedor. La temática libre. No necesario CSS. Se valora usar funciones de modificación del árbol DOM y no usar innerHTML.
-Al menos los siguientes elementos HTML a un formulario:
--Campos de texto donde poner el DNI, el nombre y los apellidos, la dirección y el teléfono.
--Dos radio button, con 4 opciones a elegir
--Cinco checkbox diferentes
--2 imágenes
--Un campo select
--Un text area*/
-
-
+//CREAR ELEMENTO FORMULARIO
 //INPUT DNI
+document.write("<br\>");
 document.write("DNI: ");
 var campoDni= document.createElement("input");
+campoDni.id = "campo1"
 campoDni.placeholder ="Ingrese su DNI";
+campoDni.setAttribute("autofocus","true");
+campoDni.setAttribute("required","true");
 divformu.appendChild(campoDni)
-document.body.appendChild(divformu);
-
-//campoDni.id = "campo1"
-//document.body.appendChild(campoDni);
+document.body.appendChild(campoDni);
 document.write("<br\>");
 
 //INPUT NOMBRE
@@ -24,6 +16,9 @@ document.write("Nombre: ");
 var campoNombre= document.createElement("input");
 campoNombre.id = "campo2"
 campoNombre.placeholder="Ingrese su nombre";
+campoNombre.setAttribute("required","true");
+campoNombre.setAttribute('maxlength',15);
+divformu.appendChild(campoNombre);
 document.body.appendChild(campoNombre);
 document.write("<br\>");
 
@@ -32,44 +27,68 @@ document.write("Apellidos: ");
 var campoApellidos= document.createElement("input");
 campoApellidos.id = "campo3"
 campoApellidos.placeholder="Ingrese sus apellidos";
+campoApellidos.setAttribute('maxlength',30);
 document.body.appendChild(campoApellidos);
+document.write("<br\>");
+
+//INPUT EDAD
+document.write("Edad: ");
+var campoEdad= document.createElement("input");
+campoEdad.setAttribute("type", "number");
+campoEdad.id = "campo4"
+campoEdad.setAttribute('min',18);
+campoEdad.setAttribute('max',90);
+
+document.body.appendChild(campoEdad);
 document.write("<br\>");
 
 //INPUT DIRECCION
 document.write("Direccion: ");
 var direccion = document.createElement("input");
-direccion.id ="campo4";
+direccion.id ="campo5";
 direccion.placeholder="Ingrese su dirección";
+direccion.setAttribute('maxlength',45);
 document.body.appendChild(direccion);
 document.write("<br\>");
 
 //INPUT TELEFONOS
 document.write("Teléfono: ")
 var telefonos = document.createElement("input");
-telefonos.placeholder="Ingrese su teléfono";
+telefonos.placeholder="Formato: 123-456-7890";
+telefonos.setAttribute("type","tel");
+telefonos.setAttribute("required","true");
+telefonos.setAttribute("pattern","[0-9]{3}-[0-9]{3})-[0-9]{3}");
 telefonos.id="campo5"
 document.body.appendChild(telefonos);
+document.write("<br\>");
 document.write("<br\>");
 
 //select
 document.write("Ciudades: ");
 var campoCiudades= document.createElement("select");
+var opcion =document.createElement("option");
+campoCiudades.appendChild(opcion);
+var contenido=document.createTextNode("Escoja una ciudad");
+opcion.setAttribute("selected","enable");
+opcion.appendChild(contenido);
+
 var opcion1 = document.createElement("option");
 //campoCiudades.id = "ciudades"
 campoCiudades.appendChild(opcion1);
-var contenido1 = document.createTextNode("Paris!");
+var contenido1 = document.createTextNode("¡Paris!");
 opcion1.appendChild(contenido1);
 document.body.appendChild(campoCiudades);
 var opcion2 = document.createElement("option");
 campoCiudades.appendChild(opcion2);
 var contenido2=
-document.createTextNode("Roma!");
+document.createTextNode("¡Roma!");
 opcion2.appendChild(contenido2);
 var opcion3 = document.createElement("option");
 campoCiudades.appendChild(opcion3);
-var contenido3 = document.createTextNode("Madrid!");
+var contenido3 = document.createTextNode("¡Berlin!");
 opcion3.appendChild(contenido3);
 document.body.appendChild(campoCiudades);
+document.write("<br\>");
 
 //bottom radio
 document.write("<br\>");
@@ -145,6 +164,7 @@ document.body.appendChild(radio4)
 
 //CHECKBOX
 document.write("<br\>");
+document.write("<br\>");
 
 var check_value = new Array( )
 check_value[0] = "I work at home"
@@ -160,40 +180,88 @@ for(var count in check_value)
     ptworkinfo.id="ptworkinfo" + count;
     document.body.appendChild(ptworkinfo);
     }
-
-//IMAGENES 1ª FORMA
 document.write("<br\>");
+
+/*Lista
+var parrafo = document.createElement("p");
+parrafo.createTextNode("Cuando vayas a viajar no olvides...:");
+var cosas = ["Documento de identidad","Billete","Maleta de mano", "Ser puntual"]
+var fragment = document.createDocumentFragment();
+for ( var cosa of cosas){
+ const itemli = document.createElement("li");
+ itemli.textContent=cosas;
+ fragment.appendChild(itemli)
+}
+console.log(fragment);*/
+
+//AÑADIR IMAGENES 1ªforma
+document.write("<br\>");
+//1ªIMG
 var img = new Image(150, 200);
 img.src = "https://images.unsplash.com/photo-1511739001486-6bfe10ce785f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1887&q=80";
 
 img.style.border = "2px solid black";
 img.style.borderRadius = "2px";
-img.alt="Paris";
+img.alt="Paris"
 document.body.appendChild(img);
-
+//2ªIMG
 var img = new Image(200, 200);
 img.src = "https://images.unsplash.com/photo-1552832230-c0197dd311b5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=796&q=80";
 
 img.style.border = "2px solid black";
 img.style.borderRadius = "2px";
-img.alt="Roma";
+img.alt="Roma"
 document.body.appendChild(img);
-
+//3ªIMG
 var img = new Image(200, 200);
 img.src = "https://images.unsplash.com/photo-1587330979470-3595ac045ab0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80";
 
 img.style.border = "2px solid black";
 img.style.borderRadius = "2px";
-img.alt="Belin";
+img.alt="Berlin"
 document.body.appendChild(img);
 
-//IMAGENES 2ª FORMA
+//2º FORMA AÑADIR IMAGENES
 for(let i = 0; i < 3; i++) {
-    const img =new Image(200, 200);;
+    const img =new Image(190, 190);;
     img.src = "https://picsum.photos/250/350?id=" + i;
     if(i === 5) {
       img.style.borderRadius = "50%";
+
     }
     img.classList.add("img-margin");
     document.body.appendChild(img);
   }
+  document.write("<br\>");
+  var input = document.createElement('TEXTAREA');
+  input.placeholder="Introduzca su comentario aqui:";
+  input.setAttribute('name', 'post');
+  input.setAttribute('maxlength', 5000);
+  input.setAttribute('cols', 75);
+  input.setAttribute('rows', 10);
+  input.setAttribute('required','true');
+document.body.appendChild(input)
+
+document.write("<br\>");
+
+var campoEntregar= document.createElement("input");
+campoEntregar.setAttribute("type", "submit");
+campoEntregar.setAttribute("value", "Entregar");
+document.body.appendChild(campoEntregar);
+
+
+var campoBorrar= document.createElement("input");
+campoBorrar.setAttribute("type", "reset");
+campoBorrar.setAttribute("value", "Limpiar formulario");
+document.body.appendChild(campoBorrar);
+
+document.write("<br\>");
+
+var labelArchivo = document.createElement("label");
+labelArchivo.textContent="Suba el Justificante de transferencia ";
+document.body.appendChild(labelArchivo);
+var campoArchivo = document.createElement("input");
+campoArchivo.setAttribute("type", "file");
+campoArchivo.setAttribute("name", "img");
+//campoArchivo.setAttribute(multiple);
+document.body.appendChild(campoArchivo);
