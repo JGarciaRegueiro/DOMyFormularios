@@ -266,6 +266,9 @@ div8.appendChild(radio4)
 var div9 = document.createElement("div");
 //Añadir el nodo Element como hijo de la pagina
 formulario.appendChild(div9);
+var textoCheck= document.createTextNode("¿Que tipo de viaje prefieres?:");
+//Añadir el nodo Text textoRadio como hijo del nodo Element div8
+div9.appendChild(textoCheck);
 
 //1º CHECKBOX
 var checkbox1 = document.createElement("input");   
@@ -274,7 +277,7 @@ checkbox1.name = "checkGrp";
 checkbox1.id = "check1";   
 checkbox1.value = "micheck1"; 
 
-var textNode1 = document.createTextNode("Avión"); 
+var textNode1 = document.createTextNode("Playa"); 
 var label1 = document.createElement("label");   
 label1.htmlFor = checkbox1.id;   
 label1.appendChild(checkbox1);   
@@ -286,10 +289,10 @@ div9.appendChild(checkbox1)
 var checkbox2 = document.createElement("input");   
 checkbox2.type = "checkbox";   
 checkbox2.name = "checkGrp";   
-checkbox2.id = "check1";   
-checkbox2.value = "micheck1"; 
+checkbox2.id = "check2";   
+checkbox2.value = "micheck2"; 
 
-var textNode2 = document.createTextNode("Avión"); 
+var textNode2 = document.createTextNode("Montaña"); 
 var label2= document.createElement("label");   
 label2.htmlFor = checkbox2.id;   
 label2.appendChild(checkbox2);   
@@ -301,10 +304,10 @@ div9.appendChild(checkbox2)
 var checkbox3 = document.createElement("input");   
 checkbox3.type = "checkbox";   
 checkbox3.name = "checkGrp";   
-checkbox3.id = "check1";   
-checkbox3.value = "micheck1"; 
+checkbox3.id = "check3";   
+checkbox3.value = "micheck3"; 
 
-var textNode3 = document.createTextNode("Avión"); 
+var textNode3 = document.createTextNode("Crucero"); 
 var label3 = document.createElement("label");   
 label3.htmlFor = checkbox3.id;   
 label3.appendChild(checkbox3);   
@@ -316,16 +319,31 @@ div9.appendChild(checkbox3)
 var checkbox4 = document.createElement("input");   
 checkbox4.type = "checkbox";   
 checkbox4.name = "checkGrp";   
-checkbox4.id = "check1";   
-checkbox4.value = "micheck1"; 
+checkbox4.id = "check4";   
+checkbox4.value = "micheck4"; 
 
-var textNode4 = document.createTextNode("Avión"); 
+var textNode4 = document.createTextNode("Rural"); 
 var label4 = document.createElement("label");   
 label4.htmlFor = checkbox4.id;   
 label4.appendChild(checkbox4);   
 label4.appendChild(textNode4)
 div9.appendChild(label4)
 div9.appendChild(checkbox4)
+
+//5º CHECKBOX
+var checkbox5 = document.createElement("input");   
+checkbox5.type = "checkbox";   
+checkbox5.name = "checkGrp";   
+checkbox5.id = "check5";   
+checkbox5.value = "micheck5"; 
+
+var textNode5 = document.createTextNode("Safari"); 
+var label5 = document.createElement("label");   
+label5.htmlFor = checkbox5.id;   
+label5.appendChild(checkbox5);   
+label5.appendChild(textNode5)
+div9.appendChild(label5)
+div9.appendChild(checkbox5)
 
 /*Lista
 var parrafo = document.createElement("p");
