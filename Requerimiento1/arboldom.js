@@ -280,6 +280,7 @@ for(var count in check_value)
     ptworkinfo.value=(check_value[count] + '</br>');
     ptworkinfo.type="checkbox";
     ptworkinfo.id="ptworkinfo" + count;
+    //Añadir el nodo Element ptworkinfo como hijo del nodo Element div9
     div9.appendChild(ptworkinfo);
     }
 
@@ -307,6 +308,7 @@ img.src = "https://images.unsplash.com/photo-1511739001486-6bfe10ce785f?ixlib=rb
 img.style.border = "2px solid black";
 img.style.borderRadius = "2px";
 img.alt="Paris"
+//Añadir el nodo Element img como hijo del nodo Element div10
 div10.appendChild(img);
 //2ªIMG
 var img = new Image(200, 200);
@@ -315,6 +317,7 @@ img.src = "https://images.unsplash.com/photo-1552832230-c0197dd311b5?ixlib=rb-4.
 img.style.border = "2px solid black";
 img.style.borderRadius = "2px";
 img.alt="Roma"
+//Añadir el nodo Element img como hijo del nodo Element div10
 div10.appendChild(img);
 //3ªIMG
 var img = new Image(200, 200);
@@ -323,6 +326,7 @@ img.src = "https://images.unsplash.com/photo-1587330979470-3595ac045ab0?ixlib=rb
 img.style.border = "2px solid black";
 img.style.borderRadius = "2px";
 img.alt="Berlin"
+//Añadir el nodo Element img como hijo del nodo Element div10
 div10.appendChild(img);
 
 //2º FORMA AÑADIR IMAGENES
@@ -334,6 +338,7 @@ for(let i = 0; i < 3; i++) {
 
     }
     img.classList.add("img-margin");
+    //Añadir el nodo Element img como hijo del nodo Element div10
     div10.appendChild(img);
 
   }
@@ -347,6 +352,7 @@ for(let i = 0; i < 3; i++) {
   input.setAttribute('maxlength', 5000);
   input.setAttribute('cols', 75);
   input.setAttribute('rows', 10);
+  //Añadir el nodo Element input como hijo del nodo Element div10
   div10.appendChild(input)
 
 //BOTÓN ENTREGAR:
@@ -356,6 +362,7 @@ El atributo será type y su valor será submit, es decir,representa un botón qu
 var campoEntregar= document.createElement("input");
 campoEntregar.setAttribute("type", "submit");
 campoEntregar.setAttribute("value", "Entregar");
+//Añadir el nodo Element como hijo de la pagina
 formulario.appendChild(campoEntregar); 
 
 //BOTON LIMPIAR FORMULARIO:
@@ -365,4 +372,5 @@ El atributo será type y su valor será reset, restaura los elementos de un form
 var campoBorrar= document.createElement("input");
 campoBorrar.setAttribute("type", "reset");
 campoBorrar.setAttribute("value", "Limpiar");
+//Añadir el nodo Element como hijo de la pagina
 formulario.appendChild(campoBorrar);
