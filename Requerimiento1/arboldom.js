@@ -1,4 +1,6 @@
 //CREAR ELEMENTO FORMULARIO
+
+/* ACCESO AL NODO MEDIANTE EL ID*/
 var div = document.getElementById("divformu");
 var formulario = document.createElement("form");
 div.appendChild(formulario);
