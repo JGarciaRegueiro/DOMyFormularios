@@ -175,91 +175,71 @@ div7.appendChild(campoCiudades);
 var div8 = document.createElement("div");
 //Añadir el nodo Element como hijo de la pagina
 formulario.appendChild(div8);
+var fieldset = document.createElement("fieldset");
+div8.appendChild(fieldset);
 //Crear nodo de tipo Text textoRadio
-var textoRadio= document.createTextNode("Transporte:");
+var leyenda= document.createElement("legend");
+fieldset.appendChild(leyenda);
+var textoLeyenda = document.createTextNode("Transporte: ")
+leyenda.appendChild(textoLeyenda);
 //Añadir el nodo Text textoRadio como hijo del nodo Element div8
-div8.appendChild(textoRadio);
 
 //Radio1
 //Crear nodo de tipo Element radio1
-var radio1 = document.createElement("input");  
+var labelRadio1 = document.createElement("label");
+fieldset.appendChild(labelRadio1);
+var radio1 = document.createElement("input");
 radio1.type = "radio";   
 radio1.name = "radioGrp";   
 radio1.id = "rad1";   
 radio1.value = "miradio1";   
 radio1.defaultChecked = true;    
 radio1.checked = true; 
+labelRadio1.appendChild(radio1);
+var textoRadio1 = document.createTextNode("Avión");
+labelRadio1.appendChild(textoRadio1);
+
 
 //Radio2
 //Crear nodo de tipo Element radio2
+var labelRadio2 = document.createElement("label");
+fieldset.appendChild(labelRadio2);
 var radio2 = document.createElement("input");   
 radio2.type = "radio";   
 radio2.name = "radioGrp";   
 radio2.id = "rad2";   
-radio2.value = "miradio2"; 
+radio2.value = "miradio2";
+labelRadio2.appendChild(radio2);
+var textoRadio2 = document.createTextNode("Barco");
+labelRadio2.appendChild(textoRadio2);
    
 //Radio3
 //Crear nodo de tipo Element radio3
+var labelRadio3 = document.createElement("label");
+fieldset.appendChild(labelRadio3);
 var radio3 = document.createElement("input");   
 radio3.type = "radio";   
 radio3.name = "radioGrp";   
 radio3.id = "rad3";   
-radio3.value = "miradio3"; 
+radio3.value = "miradio3";
+labelRadio3.appendChild(radio3);
+var textoRadio3 = document.createTextNode("Coche");
+labelRadio3.appendChild(textoRadio3);
+
+
 //Radio4
 //Crear nodo de tipo Element radio4
+var labelRadio4= document.createElement("label");
+fieldset.appendChild(labelRadio4);
 var radio4 = document.createElement("input");   
 radio4.type = "radio";   
 radio4.name = "radioGrp";   
 radio4.id = "rad4";   
-radio4.value = "miradio4"; 
+radio4.value = "miradio4";
+labelRadio4.appendChild(radio4);
+var textoRadio4 = document.createTextNode("Autobús");
+labelRadio4.appendChild(textoRadio4);
 
-//Crear nodo de tipo Text objTextNode1
-var objTextNode1 = document.createTextNode("Avión"); 
-//Crear nodo de tipo Element objLabel1
-var objLabel1 = document.createElement("label");   
-objLabel1.htmlFor = radio1.id;   
-objLabel1.appendChild(radio1);   
-objLabel1.appendChild(objTextNode1)
-//Añadir el nodo Element objLabel1 omo hijo del nodo Element div8
-div8.appendChild(objLabel1)
-//Añadir el nodo Element radio1 omo hijo del nodo Element div8
-div8.appendChild(radio1)
-
-//Crear nodo de tipo Text objTextNode2
-var objTextNode2 = document.createTextNode("Barco");  
-//Crear nodo de tipo Element objLabel2
-var objLabel2 = document.createElement("label");   
-objLabel2.htmlFor = radio2.id;   
-objLabel2.appendChild(radio2);   
-objLabel2.appendChild(objTextNode2)
-//Añadir el nodo Element objLabel2 omo hijo del nodo Element div8
-div8.appendChild(objLabel2)
-//Añadir el nodo Element radio2 omo hijo del nodo Element div8
-div8.appendChild(radio2)
-
-//Crear nodo de tipo Text objTextNode3
-var objTextNode3 = document.createTextNode("Coche");   
-//Crear nodo de tipo Element objLabel3
-var objLabel3 = document.createElement("label");   
-objLabel3.htmlFor = radio3.id;   
-objLabel3.appendChild(radio3);   
-objLabel3.appendChild(objTextNode3)
-//Añadir el nodo Element objLabel3 omo hijo del nodo Element div8
-div8.appendChild(objLabel3)
-//Añadir el nodo Element radio3 omo hijo del nodo Element div8
-div8.appendChild(radio3)
-
-//Crear nodo de tipo Text objTextNode4
-var objTextNode4 = document.createTextNode("Autobus"); 
-//Crear nodo de tipo Element objLabel4
-var objLabel4 = document.createElement("label");   
-objLabel4.htmlFor = radio4.id;   
-objLabel4.appendChild(radio4);   
-objLabel4.appendChild(objTextNode4)
-//Añadir el nodo Element objLabel4 omo hijo del nodo Element div8
-div8.appendChild(objLabel4)
-//Añadir el nodo Element radio4 como hijo del nodo Element div8
-div8.appendChild(radio4)
 
 //CHECKBOX
 //Crear nodo de tipo Element div9
