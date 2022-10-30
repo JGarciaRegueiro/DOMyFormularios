@@ -4,6 +4,9 @@ var telefono = document.getElementById("telefono");
 var email = document.getElementById("email");
 
 function calcularPrecio (){
+    var precioPequeña = 5;
+    var precioMediana = 5;
+    var precioGrande = 5;
     alert("El precio total del pedido es $precio")
 }
 
