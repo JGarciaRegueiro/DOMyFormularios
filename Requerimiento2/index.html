@@ -9,9 +9,9 @@
 <body>
     <form action="">
         <input type="text" id="nombre" placeholder="Nombre">
-        <input type="text" placeholder="Dirección">
-        <input type="text" placeholder="Teléfono">
-        <input type="text" placeholder="Email">
+        <input type="text" id="direccion" placeholder="Dirección">
+        <input type="text" id="telefono" placeholder="Teléfono">
+        <input type="text" id="email" placeholder="Email">
 
         <fieldset>
             <legend>Tamaño:</legend>
@@ -35,7 +35,7 @@
             <label for="ingrediente1">Atún</label>
         </fieldset>
         
-        <input type="submit" value="Procesar el pedido">
+        <input type="submit" value="Procesar el pedido" onclick="validar(), calcularPrecio()">
     </form>
     <script type= "text/javascript" src="pizza.js"></script>
 </body>
