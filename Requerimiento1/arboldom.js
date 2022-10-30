@@ -72,7 +72,9 @@ var textoApellidos= document.createTextNode("Apellidos:");
 campoApellidos.id = "campo3"
 campoApellidos.placeholder="Ingrese sus apellidos";
 campoApellidos.setAttribute('maxlength',30);
+//Añadir el nodo Text textoApellidos como hijo del nodo Element div3
 div3.appendChild(textoApellidos);
+//Añadir el nodo Element campoApellidos como hijo del nodo Element div3
 div3.appendChild(campoApellidos);
 
 //INPUT EDAD
@@ -83,7 +85,10 @@ Creamos elemento input, creamos nodo texto y modificamos el atributo indicando q
 Modificamos el atributo min y max indicando ya la edad minima y maxima que puede elegir
 al nodo padre adjuntamos los elementos nodo hijo ("TextNode")y("Input") para que pueda visualizarse en el formulario
 */
+
+//Crear nodo de tipo Element div4
 var div4 = document.createElement("div");
+//Añadir el nodo Element como hijo de la pagina
 formulario.appendChild(div4);
 var campoEdad= document.createElement("input");
 var textoEdad= document.createTextNode("Edad:");
@@ -91,24 +96,30 @@ campoEdad.setAttribute("type", "number"); // Input de tipo número
 campoEdad.id = "campo4"
 campoEdad.setAttribute('min',18); // Atributo indica edad minima y maxima
 campoEdad.setAttribute('max',90);
+//Añadir el nodo Text textoEdad como hijo del nodo Element div4
 div4.appendChild(textoEdad);
+//Añadir el nodo Element campoEdad como hijo del nodo Element div4
 div4.appendChild(campoEdad);
 
 //INPUT DIRECCION
 //Crear nodo de tipo Element div5
 var div5 = document.createElement("div");
+//Añadir el nodo Element como hijo de la pagina
 formulario.appendChild(div5);
 var direccion = document.createElement("input");
 var textoDireccion= document.createTextNode("Dirección:");
 direccion.id ="campo5";
 direccion.placeholder="Ingrese su dirección";
 direccion.setAttribute('maxlength',45);
+//Añadir el nodo Text textoDireccion como hijo del nodo Element div5
 div5.appendChild(textoDireccion);
+//Añadir el nodo Element direccion como hijo del nodo Element div5
 div5.appendChild(direccion);
 
 //INPUT TELEFONOS
 //Crear nodo de tipo Element div6
 var div6 = document.createElement("div");
+//Añadir el nodo Element como hijo de la pagina
 formulario.appendChild(div6);
 var telefonos = document.createElement("input");
 var textoTelefono= document.createTextNode("Telefono:");
@@ -117,12 +128,15 @@ telefonos.setAttribute("type","tel"); //Input de tipo tel(efono)
 telefonos.setAttribute("required","true"); //Campo obligatorio
 telefonos.setAttribute("pattern","[0-9]{3}-[0-9]{3})-[0-9]{3}"); //Patron aseguir 
 telefonos.id="campo5"
+//Añadir el nodo Text textoTelefono como hijo del nodo Element div6
 div6.appendChild(textoTelefono);
+//Añadir el nodo Element telefonos como hijo del nodo Element div6
 div6.appendChild(telefonos);
 
 //select
 //Crear nodo de tipo Element div7
 var div7 = document.createElement("div");
+//Añadir el nodo Element como hijo de la pagina
 formulario.appendChild(div7);
 var campoCiudades= document.createElement("select");
 var textoCiudades= document.createTextNode("Ciudades:");
@@ -151,15 +165,19 @@ campoCiudades.appendChild(opcion3);
 //Crear nodo de tipo Text contenido3
 var contenido3 = document.createTextNode("¡Berlin!");
 opcion3.appendChild(contenido3);
+//Añadir el nodo Text textoCiudades como hijo del nodo Element div7
 div7.appendChild(textoCiudades);
+//Añadir el nodo Elemet campoCiudades como hijo del nodo Element div7
 div7.appendChild(campoCiudades);
 
 //bottom radio
 //Crear nodo de tipo Element div8
 var div8 = document.createElement("div");
+//Añadir el nodo Element como hijo de la pagina
 formulario.appendChild(div8);
 //Crear nodo de tipo Text textoRadio
 var textoRadio= document.createTextNode("Transporte:");
+//Añadir el nodo Text textoRadio como hijo del nodo Element div8
 div8.appendChild(textoRadio);
 
 //Radio1
@@ -202,7 +220,9 @@ var objLabel1 = document.createElement("label");
 objLabel1.htmlFor = radio1.id;   
 objLabel1.appendChild(radio1);   
 objLabel1.appendChild(objTextNode1)
+//Añadir el nodo Element objLabel1 omo hijo del nodo Element div8
 div8.appendChild(objLabel1)
+//Añadir el nodo Element radio1 omo hijo del nodo Element div8
 div8.appendChild(radio1)
 
 //Crear nodo de tipo Text objTextNode2
@@ -212,7 +232,9 @@ var objLabel2 = document.createElement("label");
 objLabel2.htmlFor = radio2.id;   
 objLabel2.appendChild(radio2);   
 objLabel2.appendChild(objTextNode2)
+//Añadir el nodo Element objLabel2 omo hijo del nodo Element div8
 div8.appendChild(objLabel2)
+//Añadir el nodo Element radio2 omo hijo del nodo Element div8
 div8.appendChild(radio2)
 
 //Crear nodo de tipo Text objTextNode3
@@ -222,7 +244,9 @@ var objLabel3 = document.createElement("label");
 objLabel3.htmlFor = radio3.id;   
 objLabel3.appendChild(radio3);   
 objLabel3.appendChild(objTextNode3)
+//Añadir el nodo Element objLabel3 omo hijo del nodo Element div8
 div8.appendChild(objLabel3)
+//Añadir el nodo Element radio3 omo hijo del nodo Element div8
 div8.appendChild(radio3)
 
 //Crear nodo de tipo Text objTextNode4
@@ -232,12 +256,15 @@ var objLabel4 = document.createElement("label");
 objLabel4.htmlFor = radio4.id;   
 objLabel4.appendChild(radio4);   
 objLabel4.appendChild(objTextNode4)
+//Añadir el nodo Element objLabel4 omo hijo del nodo Element div8
 div8.appendChild(objLabel4)
+//Añadir el nodo Element radio4 como hijo del nodo Element div8
 div8.appendChild(radio4)
 
 //CHECKBOX
 //Crear nodo de tipo Element div9
 var div9 = document.createElement("div");
+//Añadir el nodo Element como hijo de la pagina
 formulario.appendChild(div9);
 
 var check_value = new Array( )
@@ -271,6 +298,7 @@ console.log(fragment);*/
 //AÑADIR IMAGENES 1ªforma
 //Crer nodo de tipo Element div10
 var div10 = document.createElement("div");
+//Añadir el nodo Element como hijo de la pagina
 formulario.appendChild(div10);
 //1ªIMG
 var img = new Image(150, 200);
