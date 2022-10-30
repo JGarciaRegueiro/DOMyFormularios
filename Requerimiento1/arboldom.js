@@ -261,7 +261,7 @@ var labelRadio5 = document.createElement("label");
 fieldset2.appendChild(labelRadio5);
 var radio5 = document.createElement("input");
 radio5.type = "radio";   
-radio5.name = "radioGrp";   
+radio5.name = "radioGrp2";   
 radio5.id = "rad5";   
 radio5.value = "miradio5";   
 radio5.defaultChecked = true;    
@@ -277,7 +277,7 @@ var labelRadio6 = document.createElement("label");
 fieldset2.appendChild(labelRadio6);
 var radio6 = document.createElement("input");   
 radio6.type = "radio";   
-radio6.name = "radioGrp";   
+radio6.name = "radioGrp2";   
 radio6.id = "rad6";   
 radio6.value = "miradio6";
 labelRadio6.appendChild(radio6);
@@ -290,7 +290,7 @@ var labelRadio7 = document.createElement("label");
 fieldset2.appendChild(labelRadio7);
 var radio7 = document.createElement("input");   
 radio7.type = "radio";   
-radio7.name = "radioGrp";   
+radio7.name = "radioGrp2";   
 radio7.id = "rad7";   
 radio7.value = "miradio7";
 labelRadio7.appendChild(radio7);
@@ -304,7 +304,7 @@ var labelRadio8= document.createElement("label");
 fieldset2.appendChild(labelRadio8);
 var radio8 = document.createElement("input");   
 radio8.type = "radio";   
-radio8.name = "radioGrp";   
+radio8.name = "radioGrp2";   
 radio8.id = "rad8";   
 radio8.value = "miradio8";
 labelRadio8.appendChild(radio8);
@@ -312,93 +312,77 @@ var textoRadio8 = document.createTextNode("Familia");
 labelRadio8.appendChild(textoRadio8);
 
 
-
-
-
-
 //CHECKBOX
 //Crear nodo de tipo Element div9
 var div9 = document.createElement("div");
 //Añadir el nodo Element como hijo de la pagina
 formulario.appendChild(div9);
-var textoCheck= document.createTextNode("¿Que tipo de viaje prefieres?:");
-//Añadir el nodo Text textoRadio como hijo del nodo Element div8
-div9.appendChild(textoCheck);
+var fieldset3 = document.createElement("fieldset");
+div9.appendChild(fieldset3);
+var leyenda3= document.createElement("legend");
+fieldset3.appendChild(leyenda3);
+var textoLeyenda3 = document.createTextNode("¿A dónde quieres viajar?:")
+leyenda3.appendChild(textoLeyenda3);
 
 //1º CHECKBOX
+var labelCheckbox1 = document.createElement("label");
+fieldset3.appendChild(labelCheckbox1);
 var checkbox1 = document.createElement("input");   
 checkbox1.type = "checkbox";   
 checkbox1.name = "checkGrp";   
 checkbox1.id = "check1";   
-checkbox1.value = "micheck1"; 
-
-var textNode1 = document.createTextNode("Playa"); 
-var label1 = document.createElement("label");   
-label1.htmlFor = checkbox1.id;   
-label1.appendChild(checkbox1);   
-label1.appendChild(textNode1)
-div9.appendChild(label1)
-div9.appendChild(checkbox1)
+checkbox1.value = "micheck1";
+labelCheckbox1.appendChild(checkbox1);
+var textoCheckbox1 = document.createTextNode("Playa");
+labelCheckbox1.appendChild(textoCheckbox1);
 
 //2º CHECKBOX
+var labelCheckbox2 = document.createElement("label");
+fieldset3.appendChild(labelCheckbox2);
 var checkbox2 = document.createElement("input");   
 checkbox2.type = "checkbox";   
 checkbox2.name = "checkGrp";   
 checkbox2.id = "check2";   
-checkbox2.value = "micheck2"; 
-
-var textNode2 = document.createTextNode("Montaña"); 
-var label2= document.createElement("label");   
-label2.htmlFor = checkbox2.id;   
-label2.appendChild(checkbox2);   
-label2.appendChild(textNode2)
-div9.appendChild(label2)
-div9.appendChild(checkbox2)
+checkbox2.value = "micheck2";
+labelCheckbox2.appendChild(checkbox2);
+var textoCheckbox2 = document.createTextNode("Montaña");
+labelCheckbox2.appendChild(textoCheckbox2);
 
 //3º CHECKBOX
+var labelCheckbox3 = document.createElement("label");
+fieldset3.appendChild(labelCheckbox3);
 var checkbox3 = document.createElement("input");   
 checkbox3.type = "checkbox";   
 checkbox3.name = "checkGrp";   
 checkbox3.id = "check3";   
-checkbox3.value = "micheck3"; 
-
-var textNode3 = document.createTextNode("Crucero"); 
-var label3 = document.createElement("label");   
-label3.htmlFor = checkbox3.id;   
-label3.appendChild(checkbox3);   
-label3.appendChild(textNode3)
-div9.appendChild(label3)
-div9.appendChild(checkbox3)
+checkbox3.value = "micheck3";
+labelCheckbox3.appendChild(checkbox3);
+var textoCheckbox3 = document.createTextNode("Crucero");
+labelCheckbox3.appendChild(textoCheckbox3);
 
 //4º CHECKBOX
+var labelCheckbox4 = document.createElement("label");
+fieldset3.appendChild(labelCheckbox4);
 var checkbox4 = document.createElement("input");   
 checkbox4.type = "checkbox";   
 checkbox4.name = "checkGrp";   
 checkbox4.id = "check4";   
-checkbox4.value = "micheck4"; 
-
-var textNode4 = document.createTextNode("Rural"); 
-var label4 = document.createElement("label");   
-label4.htmlFor = checkbox4.id;   
-label4.appendChild(checkbox4);   
-label4.appendChild(textNode4)
-div9.appendChild(label4)
-div9.appendChild(checkbox4)
+checkbox4.value = "micheck4";
+labelCheckbox4.appendChild(checkbox4);
+var textoCheckbox4 = document.createTextNode("Rural");
+labelCheckbox4.appendChild(textoCheckbox4);
 
 //5º CHECKBOX
+var labelCheckbox5 = document.createElement("label");
+fieldset3.appendChild(labelCheckbox5);
 var checkbox5 = document.createElement("input");   
 checkbox5.type = "checkbox";   
 checkbox5.name = "checkGrp";   
 checkbox5.id = "check5";   
-checkbox5.value = "micheck5"; 
-
-var textNode5 = document.createTextNode("Safari"); 
-var label5 = document.createElement("label");   
-label5.htmlFor = checkbox5.id;   
-label5.appendChild(checkbox5);   
-label5.appendChild(textNode5)
-div9.appendChild(label5)
-div9.appendChild(checkbox5)
+checkbox5.value = "micheck5";
+labelCheckbox5.appendChild(checkbox5);
+var textoCheckbox5 = document.createTextNode("Safari");
+labelCheckbox5.appendChild(textoCheckbox5);
 
 /*Lista
 var parrafo = document.createElement("p");
