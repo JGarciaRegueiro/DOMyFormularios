@@ -8,24 +8,24 @@
 </head>
 <body>
     <form action="">
-        <input type="text" id="nombre" placeholder="Nombre">
+        <input type="text" id="nombre" placeholder="Nombre" autofocus>
         <input type="text" id="direccion" placeholder="Dirección">
         <input type="text" id="telefono" placeholder="Teléfono">
         <input type="text" id="email" placeholder="Email">
 
         <fieldset>
             <legend>Tamaño:</legend>
-            <label><input type="radio" id="pequeña" name="pequeña" value="pequeña">Pequeña</label>
-            <label><input type="radio" id="mediana" name="mediana" value="mediana">Mediana</label>
-            <label><input type="radio" id="grande" name="grande" value="grande">Grande</label>
+            <label><input type="radio" id="pequena" name="tamaño" value="pequeña" checked>Pequeña</label>
+            <label><input type="radio" id="mediana" name="tamaño" value="mediana">Mediana</label>
+            <label><input type="radio" id="grande" name="tamaño" value="grande">Grande</label>
         </fieldset>
         
         <fieldset>
             <legend>Ingredientes:</legend>
-            <label><input type="checkbox" id="ingrediente1" name="ingrediente1" value="Tomate">Tomate</label>
-            <label><input type="checkbox" id="ingrediente2" name="ingrediente2" value="Queso">Queso</label>
-            <label><input type="checkbox" id="ingrediente3" name="ingrediente3" value="Bacon">Bacon</label>
-            <label><input type="checkbox" id="ingrediente4" name="ingrediente4" value="Atún">Atún</label>
+            <label><input type="checkbox" id="ingrediente1" name="ingrediente" value="Tomate" checked>Tomate</label>
+            <label><input type="checkbox" id="ingrediente2" name="ingrediente" value="Queso">Queso</label>
+            <label><input type="checkbox" id="ingrediente3" name="ingrediente" value="Bacon">Bacon</label>
+            <label><input type="checkbox" id="ingrediente4" name="ingrediente" value="Atún">Atún</label>
         </fieldset>
         
         <input type="submit" value="Procesar el pedido" onclick="validar(), calcularPrecio()">
