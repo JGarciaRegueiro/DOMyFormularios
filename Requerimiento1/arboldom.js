@@ -241,6 +241,81 @@ var textoRadio4 = document.createTextNode("Autobús");
 labelRadio4.appendChild(textoRadio4);
 
 
+//bottom radio
+//Crear nodo de tipo Element div8
+var div11 = document.createElement("div");
+//Añadir el nodo Element como hijo de la pagina
+formulario.appendChild(div11);
+var fieldset2 = document.createElement("fieldset");
+div11.appendChild(fieldset2);
+//Crear nodo de tipo Text textoRadio
+var leyenda2= document.createElement("legend");
+fieldset2.appendChild(leyenda2);
+var textoLeyenda2 = document.createTextNode("Personas: ")
+leyenda2.appendChild(textoLeyenda2);
+
+
+//Radio5
+//Crear nodo de tipo Element radio5
+var labelRadio5 = document.createElement("label");
+fieldset2.appendChild(labelRadio5);
+var radio5 = document.createElement("input");
+radio5.type = "radio";   
+radio5.name = "radioGrp";   
+radio5.id = "rad5";   
+radio5.value = "miradio5";   
+radio5.defaultChecked = true;    
+radio5.checked = true; 
+labelRadio5.appendChild(radio5);
+var textoRadio5 = document.createTextNode("Solo");
+labelRadio5.appendChild(textoRadio5);
+
+
+//Radio6
+//Crear nodo de tipo Element radio6
+var labelRadio6 = document.createElement("label");
+fieldset2.appendChild(labelRadio6);
+var radio6 = document.createElement("input");   
+radio6.type = "radio";   
+radio6.name = "radioGrp";   
+radio6.id = "rad6";   
+radio6.value = "miradio6";
+labelRadio6.appendChild(radio6);
+var textoRadio6 = document.createTextNode("Pareja");
+labelRadio6.appendChild(textoRadio6);
+   
+//Radio7
+//Crear nodo de tipo Element radio7
+var labelRadio7 = document.createElement("label");
+fieldset2.appendChild(labelRadio7);
+var radio7 = document.createElement("input");   
+radio7.type = "radio";   
+radio7.name = "radioGrp";   
+radio7.id = "rad7";   
+radio7.value = "miradio7";
+labelRadio7.appendChild(radio7);
+var textoRadio7 = document.createTextNode("Grupo de amigos");
+labelRadio7.appendChild(textoRadio7);
+
+
+//Radio8
+//Crear nodo de tipo Element radio8
+var labelRadio8= document.createElement("label");
+fieldset2.appendChild(labelRadio8);
+var radio8 = document.createElement("input");   
+radio8.type = "radio";   
+radio8.name = "radioGrp";   
+radio8.id = "rad8";   
+radio8.value = "miradio8";
+labelRadio8.appendChild(radio8);
+var textoRadio8 = document.createTextNode("Familia");
+labelRadio8.appendChild(textoRadio8);
+
+
+
+
+
+
 //CHECKBOX
 //Crear nodo de tipo Element div9
 var div9 = document.createElement("div");
