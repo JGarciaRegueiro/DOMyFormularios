@@ -1,8 +1,10 @@
-//CREAR ELEMENTO FORMULARIO
+/*Página web completamente por JavaScript, modificando el árbol DOM.
+solo tendrá un contenedor (DIV) y por medio de JavaScript se añadirán elementos La temática libre. No es necesario usar CSS. Se valorará usar funciones propias de modificación del DOM y no usar innerHTML.
+*/
 
 /* ACCESO AL NODO DOCUMENT MEDIANTE EL ID*/
 var div = document.getElementById("divformu");
-var formulario = document.createElement("form");
+var formulario = document.createElement("form"); // Creamos elemento formulario
 div.appendChild(formulario);
 
 /*No hemos utilizado la función document.getElementsByTagName("p"), ya que en este caso sólo hay un contenedor de tipo div, en nuestro
@@ -22,6 +24,10 @@ var campoDni= document.createElement("input");
 //Crer nodo de tipo Text
 var textoDni = document.createTextNode("DNI:");
 
+/*
+Añadimos atributo placeholder (marcador de posición)
+Modificamos atributos: autofocus (poner el cursor de manera activa) y required (el campo es obligatorio)
+*/
 campoDni.id = "campo1" //<input id= "campoDni"></input>
 campoDni.placeholder ="Ingrese su DNI";
 campoDni.setAttribute("autofocus","true");
@@ -48,7 +54,7 @@ var textoNombre = document.createTextNode("Nombre:");
 campoNombre.id = "campo2"//<input id= "campoNombre"></input>
 campoNombre.placeholder="Ingrese su nombre";
 campoNombre.setAttribute("required","true");
-campoNombre.setAttribute('maxlength',15);
+campoNombre.setAttribute('maxlength',15); //atributo maxLenght (longitud máxima de caracteres)
 
 //Añadir el nodo Text textoNombre como hijo del nodo Element div2
 div2.appendChild(textoNombre);
@@ -70,14 +76,20 @@ div3.appendChild(textoApellidos);
 div3.appendChild(campoApellidos);
 
 //INPUT EDAD
-//Crer nodo de tipo Element div4
+/*
+Crear nodo de tipo Element div.
+nodo padre(formulario) le adjunto nodo elemento hijo (div4)
+Creamos elemento input, creamos nodo texto y modificamos el atributo indicando que será de tipo número. 
+Modificamos el atributo min y max indicando ya la edad minima y maxima que puede elegir
+al nodo padre adjuntamos los elementos nodo hijo ("TextNode")y("Input") para que pueda visualizarse en el formulario
+*/
 var div4 = document.createElement("div");
 formulario.appendChild(div4);
 var campoEdad= document.createElement("input");
 var textoEdad= document.createTextNode("Edad:");
-campoEdad.setAttribute("type", "number");
+campoEdad.setAttribute("type", "number"); // Input de tipo número
 campoEdad.id = "campo4"
-campoEdad.setAttribute('min',18);
+campoEdad.setAttribute('min',18); // Atributo indica edad minima y maxima
 campoEdad.setAttribute('max',90);
 div4.appendChild(textoEdad);
 div4.appendChild(campoEdad);
@@ -101,9 +113,9 @@ formulario.appendChild(div6);
 var telefonos = document.createElement("input");
 var textoTelefono= document.createTextNode("Telefono:");
 telefonos.placeholder="Formato: 123-456-7890";
-telefonos.setAttribute("type","tel");
-telefonos.setAttribute("required","true");
-telefonos.setAttribute("pattern","[0-9]{3}-[0-9]{3})-[0-9]{3}");
+telefonos.setAttribute("type","tel"); //Input de tipo tel(efono)
+telefonos.setAttribute("required","true"); //Campo obligatorio
+telefonos.setAttribute("pattern","[0-9]{3}-[0-9]{3})-[0-9]{3}"); //Patron aseguir 
 telefonos.id="campo5"
 div6.appendChild(textoTelefono);
 div6.appendChild(telefonos);
@@ -295,27 +307,34 @@ for(let i = 0; i < 3; i++) {
     }
     img.classList.add("img-margin");
     div10.appendChild(img);
+
   }
-  //Crer nodo de tipo Element input
+  //TEXTAREA
+  /*Crear nodo de tipo Element textarea
+  Añadimos atributo placeholder y modificamos atributos (name y post para recoger en el formulario el valor), (maxlenght 5000 máximo numero de caracteres permitidos) y (cols y row para el numero de columnas y filas de nuestro área de texto).
+  */
   var input = document.createElement('TEXTAREA');
   input.placeholder="Introduzca su comentario aqui:";
   input.setAttribute('name', 'post');
   input.setAttribute('maxlength', 5000);
   input.setAttribute('cols', 75);
   input.setAttribute('rows', 10);
-  input.setAttribute('required','true');
-div10.appendChild(input)
+  div10.appendChild(input)
 
-//Botón Entregar
-//Crer nodo de tipo Element campoEntregar
+//BOTÓN ENTREGAR:
+/*Crear nodo de tipo Element input
+El atributo será type y su valor será submit, es decir,representa un botón que, cuando es presionado, envía el formulario (form) al que pertenece.
+*/
 var campoEntregar= document.createElement("input");
 campoEntregar.setAttribute("type", "submit");
 campoEntregar.setAttribute("value", "Entregar");
-formulario.appendChild(campoEntregar);
+formulario.appendChild(campoEntregar); 
 
-//Botón Limpiar formulario
-//Crer nodo de tipo Element campoBorrar
+//BOTON LIMPIAR FORMULARIO:
+/*Crear nodo de tipo Element input
+El atributo será type y su valor será reset, restaura los elementos de un formulario a sus valores por defecto.
+*/
 var campoBorrar= document.createElement("input");
 campoBorrar.setAttribute("type", "reset");
-campoBorrar.setAttribute("value", "Limpiar formulario");
+campoBorrar.setAttribute("value", "Limpiar");
 formulario.appendChild(campoBorrar);
