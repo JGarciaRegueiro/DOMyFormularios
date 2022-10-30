@@ -52,7 +52,6 @@ function validar (){
     }
 
     else return true;
-
 }
 
 function calcularPrecio (){
