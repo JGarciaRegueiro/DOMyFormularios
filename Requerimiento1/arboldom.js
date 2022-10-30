@@ -384,17 +384,6 @@ labelCheckbox5.appendChild(checkbox5);
 var textoCheckbox5 = document.createTextNode("Safari");
 labelCheckbox5.appendChild(textoCheckbox5);
 
-/*Lista
-var parrafo = document.createElement("p");
-parrafo.createTextNode("Cuando vayas a viajar no olvides...:");
-var cosas = ["Documento de identidad","Billete","Maleta de mano", "Ser puntual"]
-var fragment = document.createDocumentFragment();
-for ( var cosa of cosas){
- const itemli = document.createElement("li");
- itemli.textContent=cosas;
- fragment.appendChild(itemli)
-}
-console.log(fragment);*/
 
 //AÑADIR IMAGENES 1ªforma
 //Crer nodo de tipo Element div10
@@ -442,10 +431,14 @@ for(let i = 0; i < 3; i++) {
     div10.appendChild(img);
 
   }
+
+
   //TEXTAREA
   /*Crear nodo de tipo Element textarea
   Añadimos atributo placeholder y modificamos atributos (name y post para recoger en el formulario el valor), (maxlenght 5000 máximo numero de caracteres permitidos) y (cols y row para el numero de columnas y filas de nuestro área de texto).
   */
+  var div12 = document.createElement("div");
+  formulario.appendChild(div12);
   var input = document.createElement('TEXTAREA');
   input.placeholder="Introduzca su comentario aqui:";
   input.setAttribute('name', 'post');
@@ -453,7 +446,7 @@ for(let i = 0; i < 3; i++) {
   input.setAttribute('cols', 75);
   input.setAttribute('rows', 10);
   //Añadir el nodo Element input como hijo del nodo Element div10
-  div10.appendChild(input)
+  div12.appendChild(input)
 
 //BOTÓN ENTREGAR:
 /*Crear nodo de tipo Element input
