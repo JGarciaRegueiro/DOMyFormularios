@@ -1,3 +1,4 @@
+<!--FORMULARIO DE ALTA DEL PEDIDO DE UNA PIZZA-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +8,8 @@
     <title>Pedir una pizza</title>
 </head>
 <body>
+    <!-- Comienzo del formulario. Dentro de la etiqueta <form>. 
+    Atributo action determina donde se envían los datos recopilados, una vez que se pulse al boton submit -->
     <form action="">
         <input type="text" id="nombre" placeholder="Nombre" autofocus>
         <input type="text" id="direccion" placeholder="Dirección">
@@ -15,6 +18,7 @@
 
         <fieldset>
             <legend>Tamaño:</legend>
+            <!--Input type: radio "boton de radio".Los botones tienen el mismo NAME = al mismo grupo, pero el usuario solo podrá seleccionar un boton: EXCLUYENTE. CHECKED (atributo marcado, casilla verificacion preseleccionada)-->
             <label><input type="radio" id="pequena" name="tamaño" value="pequeña" checked>Pequeña</label>
             <label><input type="radio" id="mediana" name="tamaño" value="mediana">Mediana</label>
             <label><input type="radio" id="grande" name="tamaño" value="grande">Grande</label>
@@ -22,12 +26,14 @@
         
         <fieldset>
             <legend>Ingredientes:</legend>
+            <!--Imput type: Checkbox, "casilla de verificacion", usuario podrá marcar y desmarcar. MULTIPLES OPCIONES-->     
             <label><input type="checkbox" id="ingrediente1" name="ingrediente" value="Tomate" checked>Tomate</label>
             <label><input type="checkbox" id="ingrediente2" name="ingrediente" value="Queso">Queso</label>
             <label><input type="checkbox" id="ingrediente3" name="ingrediente" value="Bacon">Bacon</label>
             <label><input type="checkbox" id="ingrediente4" name="ingrediente" value="Atún">Atún</label>
         </fieldset>
         
+        <!--Input type submit: "boton-entregar-enviar",el usuario hace click, realiza la petición al programa servidor especificado en action-->
         <input type="submit" value="Procesar el pedido" onclick="calcularPrecio()">
     </form>
     <script type= "text/javascript" src="pizza.js"></script>
