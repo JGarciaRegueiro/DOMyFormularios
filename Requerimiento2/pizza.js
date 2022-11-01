@@ -74,7 +74,7 @@ function validar (){
  * */ 
 function calcularPrecio (){
     //COMPROBAMOS QUE LA FUNCIÓN VALIDAR SE HA REALIZADO CORRECTAMENTE
-    if (validar () == true){
+    if (validar ()){
         for (k=0; k<tamaño.length;k++){
             //SE CHEQUEA EL TAMAÑO DE LA PIZZA ELEGIDA, Y GUARDAMOS SU VALUE "pequeña,mediana o grande" EN LA VARIABLE precioPorTamaño
             if (tamaño[k].checked){
