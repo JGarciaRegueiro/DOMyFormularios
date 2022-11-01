@@ -48,3 +48,8 @@ img {
     padding: 2rem;
 }
 
+input[type=submit]{
+    background-color: rgb(104, 158, 104);
+    color: white;
+    margin: 2rem 8rem;
+}
