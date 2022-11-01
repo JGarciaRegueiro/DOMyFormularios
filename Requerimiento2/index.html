@@ -12,7 +12,7 @@
     <img src="img/logopizza.png" alt="logo_pizza">
     <!-- Comienzo del formulario. Dentro de la etiqueta <form>. 
     Atributo action determina donde se envían los datos recopilados, una vez que se pulse al boton submit -->
-    <form action="" onsubmit="return calcularPrecio()">
+    <form action="">
         <input type="text" id="nombre" placeholder="Nombre" autofocus>
         <input type="text" id="direccion" placeholder="Dirección">
         <input type="text" id="telefono" placeholder="Teléfono">
@@ -36,7 +36,7 @@
         </fieldset>
         
         <!--Input type submit: "boton-entregar-enviar",el usuario hace click, realiza la petición al programa servidor especificado en action-->
-        <input type="submit" value="Procesar el pedido">
+        <input type="submit" value="Procesar el pedido" onclick="return calcularPrecio()">
     </form>
     <script type= "text/javascript" src="pizza.js"></script>
 </body>
