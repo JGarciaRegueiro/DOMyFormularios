@@ -102,5 +102,5 @@ function calcularPrecio (){
         //AL FINALIZAR SE DEVUELVE UNA ALERTA CON EL PRECIO TOTAL DEL PEDIDO.
         alert("El precio total del pedido es " + precio +"€") 
     }
-    
+   else return false
 }
